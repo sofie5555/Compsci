@@ -1,0 +1,80 @@
+
+public class Feb15_LettersinArray {
+
+		public static void main(String[] args) {
+			char[] cha = createArray();
+			System.out.println("The lowercase letters are:"); // Show array
+			show(cha);
+
+			int[] count = counting(cha); // Count the amount of times each letter shows up 
+			System.out.println();
+			System.out.println("The occurrences of each letter are:");
+			count(count);
+		}
+		public static char[] createArray() { 	// Create an array 
+			char[] cha = new char[100];
+			for (int i = 0; i < cha.length; i++) {
+				cha[i] = RandomCharacter.getRandomLowerCaseLetter();
+			}
+			return cha;
+		}
+
+		public static void show(char[] cha) {
+			for (int i = 0; i < cha.length; i++) {if ((i + 1) % 20 == 0) 
+			{System.out.println(cha[i]);}
+			else {System.out.print(cha[i] + " ");}
+			}
+		}
+
+		 // Count the occurrences of each letter 
+		  public static int[] counting(char[] cha) {
+
+		    int[] count = new int[26];
+
+		    for (int i = 0; i < cha.length; i++)
+		      count[cha[i] - 'a']++;
+
+		    return count;
+		  }
+		public static void count(int[] count) {
+			for (int i = 0; i < count.length; i++) {
+				if ((i + 1) % 10 == 0){
+					System.out.println(count[i] + " " + (char) (i + 'a'));
+				}
+				else{
+					System.out.print(count[i] + " " + (char) (i + 'a') + "  ");
+	}
+			}
+		}
+
+	}
+
+	class RandomCharacter {
+		
+		public static char getRandomCharacter(char ch1, char ch2) {
+	
+			return (char) (ch1 + Math.random() * (ch2 - ch1 + 1));
+		}
+
+		// Generate a random lowercase letter
+		public static char getRandomLowerCaseLetter() {
+			return getRandomCharacter('a', 'z');
+		}
+
+		// Generate a random uppercase letter
+		public static char getRandomUpperCaseLetter() {
+			return getRandomCharacter('A', 'Z');
+		}
+
+		// Generate a random digit character
+		public static char getRandomDigitCharacter() {
+			return getRandomCharacter('0', '9');
+		}
+
+		// Generate a random character
+		public static char getRandomCharacter() {
+			return getRandomCharacter('\u0000', '\uFFFF');
+		}
+	}
+
+
