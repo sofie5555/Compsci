@@ -1,0 +1,30 @@
+public class Stock {
+	 String symbol, name;	
+	 double previousClosingPricethat, currentPrice;
+	
+	Stock(String symbol, String name) {
+	this.symbol = symbol;
+	this.name = name;
+	
+			
+	}	 
+		 double getClosingprice() {
+			return this.previousClosingPricethat;
+		}
+		 double getCurrent() {
+		 	return this.currentPrice;
+		 }			
+		 void setClosingprice (double price) {
+			 previousClosingPricethat = price;
+			 
+		 }
+		 void setCurrent(double price) {
+			 currentPrice = price;
+	}
+		 public double getPercent() {
+			 double percent;
+			 percent = ((currentPrice - previousClosingPricethat )/ previousClosingPricethat) *100;
+			 
+		 return percent;
+		 }
+}
