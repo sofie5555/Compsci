@@ -1,0 +1,53 @@
+
+public class Mar2_Sort2dArraypt2 {
+
+		public static void main(String[] args) {
+				int MATRIX[][] = new int[][] {
+
+						{ 4, 2 }, { 1, 7 }, { 4, 5 }, { 1, 2 }, { 1, 1 }, { 4, 1 } };
+
+				sort(MATRIX);
+			}
+
+			public static void sort(int mat[][]) {
+
+				for (int i = 0; i < mat.length; i++) {
+					for (int k = 0; k < mat[i].length; k++) {
+						System.out.print(mat[i][k] + " ");
+					}
+					
+					System.out.println();
+
+				}
+					for (int a = 0; a < mat.length; a++) {
+					
+						int currentMin = mat[a][0];
+						int minIndex = a;
+            
+						for (int k= a; k< mat.length; k++) {
+							if (currentMin > mat[k][0] || currentMin == mat[k][0] && mat[minIndex][1] > mat[k][1]) {
+								currentMin = mat[k][0];
+								minIndex = k;
+							}
+						}
+						if (minIndex != a) { 
+						
+							int temp1 = mat[minIndex][0];
+							int temp2 = mat[minIndex][1];
+              
+							mat[minIndex][0] = mat[a][0];
+							mat[minIndex][1] = mat[a][1];
+							mat[a][0] = temp1;
+							mat[a][1] = temp2;						
+						}
+				}
+				System.out.println();
+
+				for (int i = 0; i < mat.length; i++) {
+					for (int k = 0; k < mat[i].length; k++) {
+						System.out.print(mat[i][k] + " ");
+					}
+					System.out.println();
+				}
+			}
+	}
