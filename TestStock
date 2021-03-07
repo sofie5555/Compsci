@@ -1,0 +1,13 @@
+
+public class Teststock {
+
+	public static void main(String[] args) {
+		Stock stock1 = new Stock("A15", "S1");
+		System.out.print("percentage change: ");
+		stock1.setClosingprice(34.5);
+		stock1.setCurrent(34.35);
+		System.out.println(stock1.getPercent());
+		
+	}
+
+}
