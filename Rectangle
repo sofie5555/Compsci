@@ -1,0 +1,22 @@
+public class Rectangle {	
+
+		private double width, height;	
+		
+		Rectangle() {
+			width = 1;
+			height = 1;
+	}
+
+		Rectangle(double hheight1, double wwidth1) {
+			width = hheight1;
+			height = wwidth1;	
+	}	 
+		 double getArea() {
+			return height * width;
+		}
+		 double getPerim() {
+		 	return 2*(height+ width);
+		 }			
+		 
+	}
+
