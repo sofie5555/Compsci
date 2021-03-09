@@ -14,11 +14,11 @@ public class Stock {
 		 double getCurrent() {
 		 	return this.currentPrice;
 		 }			
-		public void setClosingprice (double price) {
+		public setClosingprice (double price) {
 			 previousClosingPricethat = price;
 			 
 		 }
-		public void setCurrent(double price) {
+		public setCurrent(double price) {
 			 currentPrice = price;
 	}
 		 public double getPercent() {
