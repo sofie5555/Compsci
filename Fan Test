@@ -1,0 +1,46 @@
+import java.util.Scanner;
+
+public class TestFan {
+
+	public static void main(String[] args) {
+		Fan fan1 = new Fan();
+		fan1.setspeed(3);
+		fan1.setColor("yellow");
+		fan1.setOn(true);
+		fan1.setRadius(10);
+		System.out.println("Fan (1); " + fan1.toString());
+
+		System.out.println();
+
+		Fan fan2 = new Fan();
+		fan2.setspeed(2);
+		fan2.setColor("blue");
+		fan2.setOn(false);
+		fan2.setRadius(5);
+		System.out.println("Fan (2); " + fan2.toString());
+
+		System.out.println();
+
+//Added user interaction just to go all out to practic ;P
+
+		Fan fan3 = new Fan();
+
+		Scanner in = new Scanner(System.in);
+
+		System.out.print("input speed (1, 2, 3) = ");
+		fan3.setspeed(in.nextInt());
+
+		System.out.print("What color is it?  ");
+		fan3.setColor(in.next());
+
+		System.out.print("is it on? (true/false) ");
+		fan3.setOn(in.nextBoolean());
+
+		System.out.println("radius?");
+		fan3.setRadius(in.nextDouble());
+
+		System.out.println("Fan (3); " + fan3.toString());
+
+	}
+
+}
