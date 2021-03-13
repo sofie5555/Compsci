@@ -1,0 +1,59 @@
+
+public class Fan {
+
+	public static final int FAST = 3; 
+	public static final int MEDIUM = 2;
+	public static final int SLOW = 1;
+	private int speed; //constants^
+	private boolean on;
+	private double radius;
+	private String color;
+	
+	public Fan() {
+		speed = 1;
+		on = false;
+		radius = 10;
+		color = "blue";
+		
+		}
+
+	// speeds
+	public int getspeed() {
+		return speed;
+	}
+
+	public void setspeed(int speed) {
+		this.speed = speed;
+	}
+
+	// on or off
+	public boolean getOn() {
+		return on;
+	}
+
+	public void setOn(boolean on) {
+		this.on = on;
+	}
+
+	// redius of fan
+	public double getRadius() {
+		return radius;
+	}
+
+	public void setRadius(double radius) {
+		this.radius = radius;
+	}
+
+	// color
+	public String getColor() {
+		return color;
+	}
+
+	public void setColor(String color) {
+		this.color = color;
+	}
+
+	public String toString() { //or You could put this into a sysout but I got confused
+		return "speed = " + speed + ", " + "on  = " + on + ", " + "radius = " + radius + ", " + " color = " + color;
+	}
+}
