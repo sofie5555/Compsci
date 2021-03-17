@@ -7,7 +7,7 @@ public class Fan {
 	private int speed; //constants^
 	private boolean on;
 	private double radius;
-	private String color;
+  String color; //could say private String
 	
 	public Fan() {
 		speed = 1;
@@ -31,11 +31,11 @@ public class Fan {
 		return on;
 	}
 
-	public void setOn(boolean on) {
+	public void setOn(boolean on) { //can use Itson
 		this.on = on;
 	}
 
-	// redius of fan
+	// radius of fan
 	public double getRadius() {
 		return radius;
 	}
