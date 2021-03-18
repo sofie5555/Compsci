@@ -4,16 +4,16 @@ public class Fan {
 	public static final int FAST = 3; 
 	public static final int MEDIUM = 2;
 	public static final int SLOW = 1;
-	private int speed; //constants^
-	private boolean on;
-	private double radius;
-  String color; //could say private String
+	private int speed = 1; //constants^
+	private boolean on = false;
+	private double radius = 10;
+  String color = "blue"; //could say private String
 	
 	public Fan() {
-		speed = 1;
-		on = false;
-		radius = 10;
-		color = "blue";
+		//speed = 1;
+		//on = false;
+		//radius = 10;
+		//color = "blue";
 		
 		}
 
