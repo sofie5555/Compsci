@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class TestEquation {
+
+	public static void main(String[] args) {
+
+		Scanner input = new Scanner(System.in);
+		System.out.print("Enter a, b, c: ");
+		double a = input.nextDouble();
+		double b = input.nextDouble();
+		double c = input.nextDouble();
+
+		Equation equation = new Equation(a, b, c);
+
+		equation.calc();
+	}
+
+}
