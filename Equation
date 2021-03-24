@@ -1,0 +1,65 @@
+
+public class Equation {
+
+	private double a, b, c; // The coefficients a,b,c
+
+//Constructor
+	public Equation(double a, double b, double c) {
+		this.a = a;
+		this.b = b;
+		this.c = c;
+		// this.discriminant = Math.pow(b, 2) - 4 * a * c;
+
+	}// getter methods for a,b,c
+
+	public double getA() {
+		return a;
+	}
+
+	public double getB() {
+		return b;
+	}
+
+	public double getC() {
+		return c;
+	}
+
+	public double getDiscriminant() {
+		double num = Math.pow(getB(), 2) - 4 * getA() * getC();
+
+		if (num < 0) {
+			num = -1;
+			return num;
+		}
+		if (num == 0 || num > 0) {
+			return num;
+
+		}
+		return num;
+
+	}
+
+	public double getRoo1t() {
+		double r1 = (-1 * getB() + Math.sqrt(getDiscriminant())) / (2 * getA());
+		return r1;
+	}
+
+	public double getRoo2t() {
+		double r2 = (-1 * getB() - Math.sqrt(getDiscriminant())) / (2 * getA());
+		return r2;
+
+	}
+
+	public void calc() {
+		if (getDiscriminant() < 0) {
+			System.out.println("No real roots :(");
+		}
+		if (getDiscriminant() == 0) {
+			System.out.println("Has 1 solution: " + getRoo1t() + "\n :o");
+		}
+		if (getDiscriminant() > 0) {
+			System.out.println("Has both solutions: " + getRoo1t() + " and  " + getRoo2t() + "\n :D");
+		}
+
+	}
+}
